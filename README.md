@@ -4,7 +4,7 @@ Fila para treinar manipulação de ponteiros
 
 Para rodar no MacOS: 
 
-<code> clang -c testafila.c -o testafila <\code>
+<code> clang -c testafila.c -o testafila </code>
 
 <code> chmod +x testafila </code>
 
