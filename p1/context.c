@@ -4,16 +4,20 @@
 
 // Demonstração das funções POSIX de troca de contexto (ucontext.h).
 
+#define _XOPEN_SOURCE 600	/* para compilar no MacOS */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <ucontext.h>
 
 // operating system check
 #if defined(_WIN32) || (!defined(__unix__) && !defined(__unix) && (!defined(__APPLE__) || !defined(__MACH__)))
-#warning Este codigo foi planejado para ambientes UNIX (LInux, *BSD, MacOS). A compilacao e execucao em outros ambientes e responsabilidade do usuario.
+#warning Este codigo foi planejado para
+ambientes UNIX (LInux, *BSD, MacOS).
+A compilacao e execucao em outros ambientes e responsabilidade do usuario.
 #endif
 
-#define _XOPEN_SOURCE 600	/* para compilar no MacOS */
+//#define _XOPEN_SOURCE 600	/* para compilar no MacOS */
 
 #define STACKSIZE 32768		/* tamanho de pilha das threads */
 
