@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/guilhermemorais/CLionProjects/so/p0/queue.h
+
+/Users/guilhermemorais/CLionProjects/so/p2/ppos.c
+stdio.h
+-
+ppos_data.h
+/Users/guilhermemorais/CLionProjects/so/p2/ppos_data.h
+stdlib.h
+-
+
+/Users/guilhermemorais/CLionProjects/so/p2/ppos_data.h
+ucontext.h
+-
+../p0/queue.h
+/Users/guilhermemorais/CLionProjects/so/p0/queue.h
+

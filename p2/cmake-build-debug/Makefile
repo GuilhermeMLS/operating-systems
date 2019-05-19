@@ -123,32 +123,59 @@ p2/fast:
 	$(MAKE) -f CMakeFiles/p2.dir/build.make CMakeFiles/p2.dir/build
 .PHONY : p2/fast
 
-main.o: main.c.o
+pingpong-tasks1.o: pingpong-tasks1.c.o
 
-.PHONY : main.o
+.PHONY : pingpong-tasks1.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/p2.dir/build.make CMakeFiles/p2.dir/main.c.o
-.PHONY : main.c.o
+pingpong-tasks1.c.o:
+	$(MAKE) -f CMakeFiles/p2.dir/build.make CMakeFiles/p2.dir/pingpong-tasks1.c.o
+.PHONY : pingpong-tasks1.c.o
 
-main.i: main.c.i
+pingpong-tasks1.i: pingpong-tasks1.c.i
 
-.PHONY : main.i
+.PHONY : pingpong-tasks1.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/p2.dir/build.make CMakeFiles/p2.dir/main.c.i
-.PHONY : main.c.i
+pingpong-tasks1.c.i:
+	$(MAKE) -f CMakeFiles/p2.dir/build.make CMakeFiles/p2.dir/pingpong-tasks1.c.i
+.PHONY : pingpong-tasks1.c.i
 
-main.s: main.c.s
+pingpong-tasks1.s: pingpong-tasks1.c.s
 
-.PHONY : main.s
+.PHONY : pingpong-tasks1.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/p2.dir/build.make CMakeFiles/p2.dir/main.c.s
-.PHONY : main.c.s
+pingpong-tasks1.c.s:
+	$(MAKE) -f CMakeFiles/p2.dir/build.make CMakeFiles/p2.dir/pingpong-tasks1.c.s
+.PHONY : pingpong-tasks1.c.s
+
+ppos.o: ppos.c.o
+
+.PHONY : ppos.o
+
+# target to build an object file
+ppos.c.o:
+	$(MAKE) -f CMakeFiles/p2.dir/build.make CMakeFiles/p2.dir/ppos.c.o
+.PHONY : ppos.c.o
+
+ppos.i: ppos.c.i
+
+.PHONY : ppos.i
+
+# target to preprocess a source file
+ppos.c.i:
+	$(MAKE) -f CMakeFiles/p2.dir/build.make CMakeFiles/p2.dir/ppos.c.i
+.PHONY : ppos.c.i
+
+ppos.s: ppos.c.s
+
+.PHONY : ppos.s
+
+# target to generate assembly for a file
+ppos.c.s:
+	$(MAKE) -f CMakeFiles/p2.dir/build.make CMakeFiles/p2.dir/ppos.c.s
+.PHONY : ppos.c.s
 
 # Help Target
 help:
@@ -159,9 +186,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... p2"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... pingpong-tasks1.o"
+	@echo "... pingpong-tasks1.i"
+	@echo "... pingpong-tasks1.s"
+	@echo "... ppos.o"
+	@echo "... ppos.i"
+	@echo "... ppos.s"
 .PHONY : help
 
 

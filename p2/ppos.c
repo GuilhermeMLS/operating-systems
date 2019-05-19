@@ -1,20 +1,20 @@
+// habilita compatibilidade POSIX no MacOS X (para ucontext.h)
+#define _XOPEN_SOURCE 600
 #include <stdio.h>
 #include "ppos_data.h"
 #include <stdlib.h>
 
 // Implementação das funções da lib ppos.h por Guilherme M. Lopes
 #define STACKSIZE 32768
-
-task_t tmj;
-int ids = 0;
+task_t task_main, *current_task;
+int task_ids;
 
 int task_create (task_t *task, void (*start_func)(void *), void *arg)
 {
-    char *stack;
     getcontext (&(task->context));
-    stack = malloc (STACKSIZE) ;
-    if (stack) {
-        task->context.uc_stack.ss_sp = stack ;
+    task->stack = malloc(STACKSIZE);
+    if (task->stack) {
+        task->context.uc_stack.ss_sp = task->stack ;
         task->context.uc_stack.ss_size = STACKSIZE ;
         task->context.uc_stack.ss_flags = 0 ;
         task->context.uc_link = 0 ;
@@ -22,45 +22,33 @@ int task_create (task_t *task, void (*start_func)(void *), void *arg)
         perror ("Erro na criação da pilha: ") ;
         exit (1) ;
     }
-#ifndef DEBUG
-    printf("task_create(): pilha criada.\n");
-#endif
-
-    makecontext (&(task->context), start_func, 1, arg);
-
-    task->id = ids;
-    ids++;
-
-#ifndef DEBUG
-    printf("task_create(): contexto criado.\n");
-#endif
+    task->id = task_ids;
+    task_ids++;
+    makecontext (&(task->context), (void*)(*start_func), 1, arg);
 
     return task->id;
 }
 
 int task_switch (task_t *task)
 {
-#ifndef DEBUG
-    printf("task_switch(): trocando de contexto...\n");
-#endif
-    setcontext(&(task->context));
-#ifndef DEBUG
-    printf("task_switch(): contexto trocado.\n");
-#endif
+    task_t *t = current_task;
+    current_task = task;
+    swapcontext(&(t->context), &(current_task->context));
 
-    return 0;
+    return task->id;
 }
 
 void ppos_init ()
 {
     /* desativa o buffer da saida padrao (stdout), usado pela função printf */
     setvbuf (stdout, 0, _IONBF, 0);
-    #ifndef DEBUG
-        printf("ppos_init(): PPOS iniciado.\n");
-    #endif
+    task_ids = 0;
+    task_main.id = 0;
+    getcontext(&(task_main.context));
+    current_task = &task_main;
 }
 
 void task_exit (int exit_code)
 {
-    task_switch((task_t *) &tmj.context);
+    task_switch(&task_main);
 }

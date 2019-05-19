@@ -3,4 +3,4 @@ project(p2 C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(p2 main.c)
+add_executable(p2 pingpong-tasks1.c ppos.c)

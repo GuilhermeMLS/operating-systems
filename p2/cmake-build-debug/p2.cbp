@@ -78,7 +78,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/guilhermemorais/CLionProjects/so/p2/main.c">
+		<Unit filename="/Users/guilhermemorais/CLionProjects/so/p2/pingpong-tasks1.c">
+			<Option target="p2"/>
+		</Unit>
+		<Unit filename="/Users/guilhermemorais/CLionProjects/so/p2/ppos.c">
+			<Option target="p2"/>
+		</Unit>
+		<Unit filename="/Users/guilhermemorais/CLionProjects/so/p2/ppos.h">
 			<Option target="p2"/>
 		</Unit>
 		<Unit filename="/Users/guilhermemorais/CLionProjects/so/p2/CMakeLists.txt">

@@ -3,16 +3,16 @@
 // Versão 1.2 -- Outubro de 2016
 
 // Interface do núcleo para as aplicações
+// habilita compatibilidade POSIX no MacOS X (para ucontext.h)
+#define _XOPEN_SOURCE 600
 
 #ifndef __PPOS__
 #define __PPOS__
-
 #include "ppos_data.h"		// estruturas de dados necessárias
 
 // macros importantes ==========================================================
 
-// habilita compatibilidade POSIX no MacOS X (para ucontext.h)
-#define _XOPEN_SOURCE 600
+
 
 // este código deve ser compilado em sistemas UNIX-like
 #if defined(_WIN32) || (!defined(__unix__) && !defined(__unix) && (!defined(__APPLE__) || !defined(__MACH__)))

@@ -3,11 +3,11 @@
 // Versão 1.1 -- Julho de 2016
 
 // Estruturas de dados internas do sistema operacional
+// habilita compatibilidade POSIX no MacOS X (para ucontext.h)
+#define _XOPEN_SOURCE 600
 
 #ifndef __PPOS_DATA__
 #define __PPOS_DATA__
-#define _XOPEN_SOURCE 600	/* para compilar no MacOS */
-
 #include <ucontext.h>		// biblioteca POSIX de trocas de contexto
 #include "../p0/queue.h"	// biblioteca de filas genéricas (IMPORTANTE: eu alterei pro caminho
 //onde eu guardei meu P0 // )
@@ -18,6 +18,7 @@ typedef struct task_t
     struct task_t *prev, *next ;		// ponteiros para usar em filas
     int id ;				// identificador da tarefa
     ucontext_t context ;			// contexto armazenado da tarefa
+    char *stack;
     // ... (outros campos serão adicionados mais tarde)
 } task_t ;
 
