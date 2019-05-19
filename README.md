@@ -6,13 +6,9 @@ descontinuada no MacOS desde o MacOS 10.6. Portanto,
 é necessário definir _XOPEN_SOURCE *antes de todos os includes
 e definições*:
 
-<code>
-// habilita compatibilidade POSIX no MacOS X (para ucontext.h)
-</code>
+<code> // habilita compatibilidade POSIX no MacOS X (para ucontext.h) </code>
 
-<code>
-#define _XOPEN_SOURCE 600
-</code>
+<code> #define _XOPEN_SOURCE 600 </code>
 
 <h1>Trabalho ZERO de Sistemas Operacionais 2019/1 </h1>
 
