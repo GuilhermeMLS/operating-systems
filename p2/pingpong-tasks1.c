@@ -8,11 +8,14 @@
 #include <stdlib.h>
 #include "ppos.h"
 
-task_t Ping, Pong ;
+task_t Ping, Pong;
 
 // corpo da thread Ping
 void BodyPing (void * arg)
 {
+#ifndef DEBUG
+    printf("BodyPing(): contexto trocado.\n");
+#endif
     int i ;
     char* name = (char *) arg ;
 
@@ -29,6 +32,9 @@ void BodyPing (void * arg)
 // corpo da thread Pong
 void BodyPong (void * arg)
 {
+#ifndef DEBUG
+    printf("BodyPong(): contexto trocado.\n");
+#endif
     int i ;
     char* name = (char *) arg ;
 
