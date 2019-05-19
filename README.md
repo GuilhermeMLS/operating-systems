@@ -8,6 +8,9 @@ e definições*:
 
 <code>
 // habilita compatibilidade POSIX no MacOS X (para ucontext.h)
+</code>
+
+<code>
 #define _XOPEN_SOURCE 600
 </code>
 
