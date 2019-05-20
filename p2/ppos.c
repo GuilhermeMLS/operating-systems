@@ -43,7 +43,7 @@ int task_create (
     task->id = task_ids;
     task_ids++;
     makecontext (&(task->context), (void*)(*start_func), 1, arg);
-    print_message(MAG, "task_create()", "Tarefa criada");
+    print_message(MAG, "task_create()", "Tarefa %s criada");
 
     return task->id;
 }
@@ -63,7 +63,7 @@ void ppos_init ()
     print_message(MAG, "ppos_init()", "Iniciando sistema operacional");
     /* desativa o buffer da saida padrao (stdout), usado pela função printf */
     setvbuf (stdout, 0, _IONBF, 0);
-    task_ids = 0;
+    task_ids = 1;
     task_main.id = 0;
     getcontext(&(task_main.context));
     current_task = &task_main;
@@ -73,4 +73,8 @@ void task_exit (int exit_code)
 {
     print_message(MAG, "task_exit()", "Saindo da tarefa");
     task_switch(&task_main);
+}
+
+int task_id() {
+    return current_task->id;
 }
