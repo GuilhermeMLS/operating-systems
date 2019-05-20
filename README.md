@@ -46,3 +46,12 @@ Para rodar no MacOS:
 <code> clang pingpong-tasks1.c ppos.c -o pingpong-tasks1 -Wall -DDEBUG </code>
 
 <code> ./pinpong-tasks1 </code>
+
+Existem outros 2 testes: 
+<ul>
+    <li> pinpong-tasks2.c </li>
+    <li> pinpong-tasks3.c </li>
+</ul>
+
+A compilação destes é análoga ao do primeiro.
+As saídas esperadas estão <a href="http://wiki.inf.ufpr.br/maziero/doku.php?id=so:gestao_de_tarefas">neste link</a>.
