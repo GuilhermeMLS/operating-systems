@@ -31,10 +31,21 @@ void print_message(char *color, char *func, char *message)
 int task_switch (task_t *task)
 {
     task_t *t = current_task;
+    printf("Current_task: %d\n", t->id);
     current_task = task;
+    printf("Current_task: %d\n", current_task->id);
     print_message(MAG, "task_switch()", "Trocando contexto");
-    printf("INDO PARA A TAREFA %p\n", task);
-    swapcontext(&(t->context), &(current_task->context));
+    printf("SAINDO DA TAREFA %d\n", t->id);
+    printf("SAINDO DA TAREFA POINTER: %p\n", t);
+
+    printf("INDO PARA A TAREFA %d\n", task->id);
+    printf("INDO PARA A TAREFA POINTER: %p\n", task);
+    if (t == &dispatcher) {
+        swapcontext(&(t->context), &(current_task->context));
+    } else {
+        printf("(*t).id: %d\n", (*t).id);
+        swapcontext(&((*t).context), &(task->context));
+    }
 
     return task->id;
 }
@@ -59,7 +70,7 @@ void dispatcher_body()
     task_t *task;
     printf("aqui chegou carai\n");
     printf("TAMANHO DA FILA: %d\n", queue_size((queue_t*)tasks_queue));
-    queue_print("Fila de tarefas: ", (queue_t*)tasks_queue, "");
+    queue_print("Fila de tarefas: ", (queue_t*)tasks_queue, NULL);
     while (queue_size((queue_t*)tasks_queue) > 0) {
         task = scheduler();
         if (task != NULL) {
@@ -90,7 +101,7 @@ int task_create (
     }
     task->id = task_ids;
     task_ids++;
-    makecontext (&(task->context), (void*)(*start_func), 1, arg);
+    makecontext (&(task->context), (void*)(start_func), 1, arg);
 
     // tarefa entra na fila
     if (task->id != 1) {
@@ -98,6 +109,7 @@ int task_create (
     }
 
     print_message(MAG, "task_create()", "Tarefa criada");
+
 
     return task->id;
 }
@@ -114,8 +126,8 @@ void ppos_init ()
     getcontext(&(task_main.context));
     current_task = &task_main;
     // P3
-    task_create(&dispatcher, (void *)(*dispatcher_body), "");
-    queue_remove((queue_t **)&tasks_queue, (queue_t *)&dispatcher);
+    task_create(&dispatcher, (void *)(dispatcher_body), "");
+    //queue_remove((queue_t **)&tasks_queue, (queue_t *)&dispatcher);
 
 }
 

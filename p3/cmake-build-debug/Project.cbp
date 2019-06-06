@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Project"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/guilhermemorais/CLionProjects/so/p3/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/guilhermemorais/CLionProjects/so/p3/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/guilhermemorais/CLionProjects/so/p3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/guilhermemorais/CLionProjects/so/p3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/guilhermemorais/CLionProjects/so/p3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/guilhermemorais/CLionProjects/so/p3/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/guilhermemorais/CLionProjects/so/p3/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/guilhermemorais/CLionProjects/so/p3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/guilhermemorais/CLionProjects/so/p3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/guilhermemorais/CLionProjects/so/p3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/guilhermemorais/CLionProjects/so/p3/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/guilhermemorais/CLionProjects/so/p3/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/guilhermemorais/CLionProjects/so/p3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/guilhermemorais/CLionProjects/so/p3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/guilhermemorais/CLionProjects/so/p3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="teste">
+				<Option output="/Users/guilhermemorais/CLionProjects/so/p3/cmake-build-debug/teste" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/guilhermemorais/CLionProjects/so/p3/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/guilhermemorais/CLionProjects/so/p3/cmake-build-debug/Makefile&quot;  VERBOSE=1 teste"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/guilhermemorais/CLionProjects/so/p3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/guilhermemorais/CLionProjects/so/p3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/guilhermemorais/CLionProjects/so/p3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="teste/fast">
+				<Option output="/Users/guilhermemorais/CLionProjects/so/p3/cmake-build-debug/teste" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/guilhermemorais/CLionProjects/so/p3/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/guilhermemorais/CLionProjects/so/p3/cmake-build-debug/Makefile&quot;  VERBOSE=1 teste/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/guilhermemorais/CLionProjects/so/p3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/guilhermemorais/CLionProjects/so/p3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/guilhermemorais/CLionProjects/so/p3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/guilhermemorais/CLionProjects/so/p3/pingpong-dispatcher.c">
+			<Option target="teste"/>
+		</Unit>
+		<Unit filename="/Users/guilhermemorais/CLionProjects/so/p3/ppos.c">
+			<Option target="teste"/>
+		</Unit>
+		<Unit filename="/Users/guilhermemorais/CLionProjects/so/p3/ppos.h">
+			<Option target="teste"/>
+		</Unit>
+		<Unit filename="/Users/guilhermemorais/CLionProjects/so/p3/queue.c">
+			<Option target="teste"/>
+		</Unit>
+		<Unit filename="/Users/guilhermemorais/CLionProjects/so/p3/queue.h">
+			<Option target="teste"/>
+		</Unit>
+		<Unit filename="/Users/guilhermemorais/CLionProjects/so/p3/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
