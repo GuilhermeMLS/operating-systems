@@ -55,7 +55,7 @@ task_t *scheduler()
     print_message(RED, "scheduler()", "Selecionando próxima tarefa");
     task_t *task_to_run = tasks_queue;
     task_t *iterator = task_to_run->next;
-    while (iterator != task_to_run) {
+    while (iterator != tasks_queue) {
         if (iterator->priority <= task_to_run->priority) {
             task_to_run = iterator;
         }

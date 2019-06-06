@@ -116,10 +116,9 @@ void queue_print (char *name, queue_t *queue)
         printf("[ ");
         printf(" <%p (%p) %p> ", queue->prev, queue, queue->next);
         queue_t *aux = (queue)->next;
-        printf(" <%p (%p) %p> ", queue->prev, queue, queue->next);
         printf(" ");
         while (aux != queue) {
-            printf(" <%p:%p> ", aux->prev, aux->next);
+            printf(" <%p (%p) %p> ", aux->prev, aux, aux->next);
             printf(" ");
             aux = aux->next;
         }

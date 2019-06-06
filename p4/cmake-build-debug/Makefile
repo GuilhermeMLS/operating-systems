@@ -123,33 +123,6 @@ p4/fast:
 	$(MAKE) -f CMakeFiles/p4.dir/build.make CMakeFiles/p4.dir/build
 .PHONY : p4/fast
 
-main.o: main.c.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/p4.dir/build.make CMakeFiles/p4.dir/main.c.o
-.PHONY : main.c.o
-
-main.i: main.c.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/p4.dir/build.make CMakeFiles/p4.dir/main.c.i
-.PHONY : main.c.i
-
-main.s: main.c.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/p4.dir/build.make CMakeFiles/p4.dir/main.c.s
-.PHONY : main.c.s
-
 pingpong-scheduler.o: pingpong-scheduler.c.o
 
 .PHONY : pingpong-scheduler.o
@@ -240,9 +213,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... p4"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 	@echo "... pingpong-scheduler.o"
 	@echo "... pingpong-scheduler.i"
 	@echo "... pingpong-scheduler.s"

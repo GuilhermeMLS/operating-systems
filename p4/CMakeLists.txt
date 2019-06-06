@@ -3,4 +3,4 @@ project(p4 C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(p4 main.c pingpong-scheduler.c ppos.c queue.c)
+add_executable(p4 pingpong-scheduler.c ppos.c queue.c)

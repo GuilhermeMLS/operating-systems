@@ -78,9 +78,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/guilhermemorais/CLionProjects/so/p4/main.c">
-			<Option target="p4"/>
-		</Unit>
 		<Unit filename="/Users/guilhermemorais/CLionProjects/so/p4/pingpong-scheduler.c">
 			<Option target="p4"/>
 		</Unit>

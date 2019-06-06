@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/p4.dir/main.c.o"
   "CMakeFiles/p4.dir/pingpong-scheduler.c.o"
   "CMakeFiles/p4.dir/ppos.c.o"
   "CMakeFiles/p4.dir/queue.c.o"
