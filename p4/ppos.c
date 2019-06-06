@@ -62,6 +62,7 @@ task_t *scheduler()
         iterator = iterator->next;
     }
     // implements aging
+    print_message(RED, "scheduler()", "Aplicando aging...");
     iterator = task_to_run->next;
     while (iterator != task_to_run) {
         iterator->priority += age;
