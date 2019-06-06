@@ -34,11 +34,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b507cc85-94a9-4ab6-b43d-501db3f1d156" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/teste.dir/ppos.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/teste.dir/ppos.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/teste" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/teste" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ppos.c" beforeDir="false" afterPath="$PROJECT_DIR$/ppos.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teste" beforeDir="false" afterPath="$PROJECT_DIR$/teste" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,8 +52,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ppos.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1755">
-              <caret line="65" column="27" lean-forward="true" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
+            <state relative-caret-position="274">
+              <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
               <folding>
                 <element signature="e#89#107#0" expanded="true" />
                 <element signature="e#611#663#0" expanded="true" />
@@ -241,12 +237,12 @@
       <workItem from="1558992683978" duration="9170000" />
       <workItem from="1559594244062" duration="3636000" />
       <workItem from="1559840406063" duration="1030000" />
-      <workItem from="1559842558175" duration="189000" />
+      <workItem from="1559842558175" duration="390000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20515000" />
+    <option name="totallyTimeSpent" value="20716000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -388,8 +384,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ppos.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1755">
-          <caret line="65" column="27" lean-forward="true" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
+        <state relative-caret-position="274">
+          <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
           <folding>
             <element signature="e#89#107#0" expanded="true" />
             <element signature="e#611#663#0" expanded="true" />

@@ -36,7 +36,6 @@ int task_switch (task_t *task)
     if (t == &dispatcher) {
         swapcontext(&(t->context), &(current_task->context));
     } else {
-        printf("(*t).id: %d\n", (*t).id);
         swapcontext(&((*t).context), &(task->context));
     }
 
