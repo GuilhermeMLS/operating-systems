@@ -108,6 +108,11 @@ int task_create (
     task_ids++;
     makecontext (&(task->context), (void*)(start_func), 1, arg);
 
+    // Tive que setar para NULL os ponteiros das tasks porque
+    // por algum motivo não estavam nulos
+    task->next = NULL;
+    task->prev = NULL;
+
     // tarefa entra na fila
     if (task->id != 1) {
         queue_append((queue_t **)&tasks_queue, (queue_t *)task);

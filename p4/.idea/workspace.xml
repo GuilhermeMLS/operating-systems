@@ -34,21 +34,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b0cf21f-5a20-40aa-8018-ef23e81a75bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../exerc_pthreads/.idea/exerc_pthreads.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exerc_pthreads/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exerc_pthreads/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exerc_pthreads/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exerc_pthreads/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exerc_pthreads/create" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exerc_pthreads/create.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../p0/teste" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../p2/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../p2/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../p2/.idea/p2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../p2/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../p2/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pingpong-scheduler.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../p3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppos.c" beforeDir="false" afterPath="$PROJECT_DIR$/ppos.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -84,8 +70,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ppos.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="94" column="3" selection-start-line="94" selection-start-column="3" selection-end-line="94" selection-end-column="3" />
+            <state relative-caret-position="483">
+              <caret line="113" column="22" lean-forward="true" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/queue.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/queue.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="244">
+              <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -111,8 +115,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pingpong-scheduler.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="17" column="70" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="70" />
+            <state relative-caret-position="415">
+              <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
               <folding>
                 <element signature="e#163#181#0" expanded="true" />
               </folding>
@@ -173,6 +177,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -206,12 +211,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559843882302</updated>
-      <workItem from="1559843884130" duration="2539000" />
+      <workItem from="1559843884130" duration="3001000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2539000" />
+    <option name="totallyTimeSpent" value="3001000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -251,10 +256,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.c">
+    <entry file="file://$PROJECT_DIR$/ppos.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        <state relative-caret-position="267">
+          <caret line="57" selection-start-line="57" selection-end-line="57" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -265,27 +270,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/queue.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/queue.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pingpong-scheduler.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="17" column="70" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="70" />
+        <state relative-caret-position="415">
+          <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
           <folding>
             <element signature="e#163#181#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ppos.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="57" selection-start-line="57" selection-end-line="57" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ppos.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="94" column="3" selection-start-line="94" selection-start-column="3" selection-end-line="94" selection-end-column="3" />
+        <state relative-caret-position="483">
+          <caret line="113" column="22" lean-forward="true" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="22" />
         </state>
       </provider>
     </entry>
