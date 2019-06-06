@@ -31,15 +31,8 @@ void print_message(char *color, char *func, char *message)
 int task_switch (task_t *task)
 {
     task_t *t = current_task;
-    printf("Current_task: %d\n", t->id);
     current_task = task;
-    printf("Current_task: %d\n", current_task->id);
     print_message(MAG, "task_switch()", "Trocando contexto");
-    printf("SAINDO DA TAREFA %d\n", t->id);
-    printf("SAINDO DA TAREFA POINTER: %p\n", t);
-
-    printf("INDO PARA A TAREFA %d\n", task->id);
-    printf("INDO PARA A TAREFA POINTER: %p\n", task);
     if (t == &dispatcher) {
         swapcontext(&(t->context), &(current_task->context));
     } else {
@@ -68,8 +61,6 @@ task_t *scheduler()
 void dispatcher_body()
 {
     task_t *task;
-    printf("aqui chegou carai\n");
-    printf("TAMANHO DA FILA: %d\n", queue_size((queue_t*)tasks_queue));
     queue_print("Fila de tarefas: ", (queue_t*)tasks_queue, NULL);
     while (queue_size((queue_t*)tasks_queue) > 0) {
         task = scheduler();
