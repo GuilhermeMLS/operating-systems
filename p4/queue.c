@@ -67,7 +67,7 @@ queue_t *queue_remove (queue_t **queue, queue_t *elem){
         return elem;
     }
     // verificar se o elemento pertence à fila
-    if (!pertenceFila(queue, elem)) {
+    if (pertenceFila(queue, elem) == 0) {
         #ifndef DEBUG
             printf("queue_remove: o elemento não pertence à fila.\n");
         #endif
