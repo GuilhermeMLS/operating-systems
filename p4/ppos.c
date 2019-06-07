@@ -55,18 +55,20 @@ task_t *scheduler()
     print_message(RED, "scheduler()", "Selecionando próxima tarefa");
     task_t *task_to_run = tasks_queue;
     task_t *iterator = task_to_run->next;
-    while (iterator != tasks_queue) {
-        if (iterator->priority <= task_to_run->priority) {
-            task_to_run = iterator;
+    if (iterator != task_to_run) {
+        while (iterator != tasks_queue) {
+            if (iterator->priority <= task_to_run->priority) {
+                task_to_run = iterator;
+            }
+            iterator = iterator->next;
         }
-        iterator = iterator->next;
-    }
-    // implements aging
-    print_message(RED, "scheduler()", "Aplicando aging...");
-    iterator = task_to_run->next;
-    while (iterator != task_to_run) {
-        iterator->priority += age;
-        iterator = iterator->next;
+        // implements aging
+        print_message(RED, "scheduler()", "Aplicando aging...");
+        iterator = task_to_run->next;
+        while (iterator != task_to_run) {
+            iterator->priority += age;
+            iterator = iterator->next;
+        }
     }
     task_to_run->priority = task_to_run->init_priority;
     printf("\nScheduler selecionou a tarefa de ID %d\n", task_to_run->id);
@@ -107,6 +109,7 @@ int task_create (
     }
     task->id = task_ids;
     task_ids++;
+
     makecontext (&(task->context), (void*)(start_func), 1, arg);
 
     // Tive que setar para NULL os ponteiros das tasks porque
@@ -154,6 +157,7 @@ void task_yield () {
 void task_setprio (task_t *task, int prio) {
     if (task != NULL) {
         task->init_priority = prio;
+        task->priority = task->init_priority;
     } else {
         current_task->init_priority = prio;
     }
