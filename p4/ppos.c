@@ -118,6 +118,8 @@ int task_create (
     }
     task->id = task_ids;
     task_ids++;
+    task->init_priority = 0;
+    task->priority = task->init_priority;
 
     makecontext (&(task->context), (void*)(start_func), 1, arg);
 
