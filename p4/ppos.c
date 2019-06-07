@@ -188,7 +188,9 @@ int task_id() {
 
 void task_yield () {
     //print_message(RED, "ppos_init()", "Iniciando Dispatcher");
-    queue_append((queue_t **) tasks_queue, (queue_t *) current_task);
+    if (current_task != &task_main) {
+        queue_append((queue_t **) tasks_queue, (queue_t *) current_task);
+    }
     task_switch(&dispatcher);
 }
 
