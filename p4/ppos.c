@@ -33,7 +33,8 @@ int task_switch (task_t *task)
     task_t *t = current_task;
     current_task = task;
     print_message(MAG, "task_switch()", "Trocando contexto");
-    printf("\n<< Indo para a tarefa ponteiro %p>>\n", task);
+    printf("\n<< Saindo da tarefa ponteiro %p >>\n", t);
+    printf("\n<< Indo para a tarefa ponteiro %p >>\n", task);
     swapcontext(&(t->context), &(current_task->context));
 //    if (t == &dispatcher) {
 //        swapcontext(&(t->context), &(current_task->context));
