@@ -100,9 +100,9 @@ task_t *scheduler()
                 printf("\n[debug] comparou iterator->priority <= task_to_run->priority\n");
                 task_to_run = iterator;
             }
-
+            printf("\n[debug] depois do IF \n");
             iterator = iterator->next;
-            printf("\n[debug] comparou iterator = iterator->next\n");
+            printf("\n[debug] atribuiu iterator = iterator->next\n");
         }
         // implements aging
         print_message(RED, "scheduler()", "Aplicando aging...");
