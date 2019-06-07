@@ -46,9 +46,11 @@ int task_switch (task_t *task)
 void task_exit (int exit_code) {
     print_message(MAG, "task_exit()", "Saindo da tarefa");
     if (tasks_queue) {
+        print_message(MAG, "task_exit()", "Ainda tem tarefa na fila");
         queue_remove((queue_t **) tasks_queue, (queue_t *) current_task);
         task_switch(&dispatcher);
     } else {
+        print_message(MAG, "task_exit()", "Fila vazia, voltando para main");
         task_switch(&task_main);
     }
 }
