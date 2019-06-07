@@ -96,6 +96,8 @@ task_t *scheduler()
         printf("\n[debug] comparou iterator com task_to_run\n");
         while (iterator != tasks_queue) {
             printf("\n[debug] entrou no while\n");
+            printf("\ninterator priority: %d\n", iterator->priority);
+            printf("\ntask_to_run priority: %d\n", task_to_run->priority);
             if (iterator->priority <= task_to_run->priority) {
                 printf("\n[debug] comparou iterator->priority <= task_to_run->priority\n");
                 task_to_run = iterator;
