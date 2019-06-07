@@ -118,6 +118,7 @@ void dispatcher_body()
     task_t *task;
     queue_print("Fila de tarefas: ", (queue_t*)tasks_queue, NULL);
     while (queue_size((queue_t*)tasks_queue) > 0) {
+        printf("lualalalalala");
         task = scheduler();
         if (task != NULL) {
             tasks_queue = tasks_queue->next;
