@@ -92,6 +92,7 @@ task_t *scheduler()
     printf("\n[debug] acessou tasks_queue\n");
     task_t *iterator = task_to_run->next;
     printf("\n[debug] acessou task_to_run->next\n");
+    printf("\n[debug] task_to_run->next %p\n", task_to_run->next);
     if (iterator != task_to_run) {
         printf("\n[debug] comparou iterator com task_to_run\n");
         while (iterator != tasks_queue) {
