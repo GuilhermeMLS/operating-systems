@@ -71,7 +71,9 @@ task_t *scheduler()
         }
     }
     task_to_run->priority = task_to_run->init_priority;
+#ifdef DEBUG
     printf("\nScheduler selecionou a tarefa de ID %d\n", task_to_run->id);
+#endif
 
     return task_to_run;
 }
