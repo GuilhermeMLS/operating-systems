@@ -9,7 +9,7 @@
 #ifndef __PPOS_DATA__
 #define __PPOS_DATA__
 #include <ucontext.h>		// biblioteca POSIX de trocas de contexto
-#include "../p0/queue.h"	// biblioteca de filas genéricas (IMPORTANTE: eu alterei pro caminho
+//#include "../p0/queue.h"	// biblioteca de filas genéricas (IMPORTANTE: eu alterei pro caminho
 //onde eu guardei meu P0 // )
 
 // Estrutura que define um Task Control Block (TCB)
