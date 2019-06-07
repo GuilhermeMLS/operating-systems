@@ -65,6 +65,7 @@ int task_switch (task_t *task)
 //        print_message(MAG,"task_swtich()", "<<<<< Trocando contexto >>>>>");
 //        swapcontext(&(t->context), &(task->context));
 //    }
+    printf("\ndale o ID da task: %d\n", task->id);
     printf("\nserá que é aqui?????\n");
     return task->id;
 }
