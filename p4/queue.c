@@ -48,49 +48,93 @@ void queue_append (queue_t **queue, queue_t *elem) {
 }
 
 queue_t *queue_remove (queue_t **queue, queue_t *elem){
-    if (*queue == NULL) {
-        #ifndef DEBUG
-           printf("queue_remove: a fila não existe.\n");
-        #endif
-        return elem;
-    }
-    if (queue_size((queue_t *) *queue) == 0) {
-        #ifndef DEBUG
-                printf("queue_remove: a fila está vazia.\n");
-        #endif
-        return elem;
-    }
-    if (!elem) {
-        #ifndef DEBUG
-                printf("queue_remove: o elemento não existe.\n");
-        #endif
-        return elem;
-    }
-    // verificar se o elemento pertence à fila
-    if (pertenceFila(queue, elem) == 0) {
-        #ifndef DEBUG
-            printf("queue_remove: o elemento não pertence à fila.\n");
-        #endif
-        return elem;
-    }
-    // se a fila tem apenas um elemento
-    if((*queue)->next == *queue) {
-        *queue = NULL;
-        elem->next = NULL;
-        elem->prev = NULL;
-        return elem;
-    }
+//    if (*queue == NULL) {
+//        #ifndef DEBUG
+//           printf("queue_remove: a fila não existe.\n");
+//        #endif
+//        return elem;
+//    }
+//    if (queue_size((queue_t *) *queue) == 0) {
+//        #ifndef DEBUG
+//                printf("queue_remove: a fila está vazia.\n");
+//        #endif
+//        return elem;
+//    }
+//    if (!elem) {
+//        #ifndef DEBUG
+//                printf("queue_remove: o elemento não existe.\n");
+//        #endif
+//        return elem;
+//    }
+//    // verificar se o elemento pertence à fila
+//    if (pertenceFila(queue, elem) == 0) {
+//        #ifndef DEBUG
+//            printf("queue_remove: o elemento não pertence à fila.\n");
+//        #endif
+//        return elem;
+//    }
+//    // se a fila tem apenas um elemento
+//    if((*queue)->next == *queue) {
+//        *queue = NULL;
+//        elem->next = NULL;
+//        elem->prev = NULL;
+//        return elem;
+//    }
     // se quer removero primeiro elemento da fila
-    if (*queue == elem) {
-        *queue = elem->next;
+//    if (*queue == elem) {
+//        *queue = elem->next;
+//    }
+//
+//    elem->prev->next = elem->next;
+//    elem->next->prev = elem->prev;
+//    elem->next = NULL;
+//    elem->prev = NULL;
+//
+//    return elem;
+    if (queue == NULL || elem == NULL)
+        return NULL;
+
+    if (queue_size(*queue) == 1 && *queue == elem)
+    {
+        *queue = NULL;
+        elem->prev = elem->next = NULL;
+        return elem;
+    }
+    else
+    {
+        // Element is first
+        if (*queue == elem)
+        {
+            elem->next->prev = elem->prev;
+            elem->prev->next = elem->next;
+
+            *queue = elem->next;
+
+            elem->prev = elem->next = NULL;
+            return elem;
+        }
+        else
+        {
+            queue_t *aux = *queue;
+
+            // Find element
+            while (aux->next != *queue && aux != elem)
+                aux = aux->next;
+
+            if (aux != elem)
+                return NULL;
+            else
+            {
+                elem->next->prev = elem->prev;
+                elem->prev->next = elem->next;
+
+                elem->prev = elem->next = NULL;
+                return elem;
+            }
+        }
     }
 
-    elem->prev->next = elem->next;
-    elem->next->prev = elem->prev;
-    elem->next = NULL;
-    elem->prev = NULL;
-
-    return elem;
+    return NULL;
 }
 
 int queue_size (queue_t *queue) {
