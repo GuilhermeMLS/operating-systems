@@ -66,8 +66,6 @@ int task_switch (task_t *task)
 //        print_message(MAG,"task_swtich()", "<<<<< Trocando contexto >>>>>");
 //        swapcontext(&(t->context), &(task->context));
 //    }
-    printf("\ndale o ID da task: %d\n", current_task->id);
-    printf("\nserá que é aqui?????\n");
     return current_task->id;
 }
 
@@ -77,7 +75,6 @@ void task_exit (int exit_code) {
         print_message(MAG, "task_exit()", "Ainda tem tarefa na fila");
         queue_remove((queue_t **) tasks_queue, (queue_t *) current_task);
         int teste = task_switch(&dispatcher);
-        printf("\nchegou aqui? %d\n", teste);
     } else {
         print_message(MAG, "task_exit()", "Fila vazia, voltando para main");
         task_switch(&task_main);
@@ -90,25 +87,13 @@ task_t *scheduler()
 {
     print_message(RED, "scheduler()", "Selecionando próxima tarefa");
     task_t *task_to_run = tasks_queue;
-    printf("\n[debug] acessou tasks_queue\n");
     task_t *iterator = task_to_run->next;
-    printf("\n[debug] acessou task_to_run->next\n");
-    printf("\n[debug] task_to_run: %p\n", task_to_run);
-    queue_print("Fila de tarefas: ", (queue_t*)tasks_queue, NULL);
-    printf("\n[debug] task_to_run->next %p\n", task_to_run->next);
     if (iterator != task_to_run) {
-        printf("\n[debug] comparou iterator com task_to_run\n");
         while (iterator != tasks_queue) {
-            printf("\n[debug] entrou no while\n");
-            printf("\ntask_to_run priority: %d\n", task_to_run->priority);
-            printf("\ninterator priority: %d\n", iterator->priority);
             if (iterator->priority <= task_to_run->priority) {
-                printf("\n[debug] comparou iterator->priority <= task_to_run->priority\n");
                 task_to_run = iterator;
             }
-            printf("\n[debug] depois do IF \n");
             iterator = iterator->next;
-            printf("\n[debug] atribuiu iterator = iterator->next\n");
         }
         // implements aging
         print_message(RED, "scheduler()", "Aplicando aging...");
@@ -119,7 +104,6 @@ task_t *scheduler()
         }
     }
     task_to_run->priority = task_to_run->init_priority;
-    printf("\n[debug] atribuiu task_to_run->priority = task_to_run->init_priority\n");
 #ifdef DEBUG
     printf("\nScheduler selecionou a tarefa de ID %d\n", task_to_run->id);
 #endif
@@ -132,17 +116,10 @@ void dispatcher_body()
     task_t *task;
     queue_print("Fila de tarefas: ", (queue_t*)tasks_queue, NULL);
     while (tasks_queue) {
-        printf("lualalalalala");
         task = scheduler();
         if (task != NULL) {
             tasks_queue = tasks_queue->next;
             task_switch(task);
-        }
-        printf("\nvou testar saporra caralho\n");
-        if (tasks_queue) {
-            printf("\nvai entrar no while\n");
-        } else {
-            printf("\nnao vai entrar no while\n");
         }
     }
     print_message(RED, "dispatcher()", "Saindo do Dispatcher");
