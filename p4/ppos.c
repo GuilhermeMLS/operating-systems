@@ -58,7 +58,7 @@ int task_switch (task_t *task)
 //    t->context.uc_link;
 #endif
     setvbuf (stdout, 0, _IONBF, 0);
-    swapcontext(current, &(current_task->context));
+    swapcontext(current, &(task->context));
 //    if (t == &dispatcher) {
 //        swapcontext(&(t->context), &(current_task->context));
 //    } else {
