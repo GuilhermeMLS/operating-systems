@@ -37,7 +37,15 @@ int task_switch (task_t *task)
     printf("\n<< Saindo da tarefa ponteiro %p >>\n", t);
     printf("\n<< Indo para a tarefa ponteiro %p >>\n", task);
 #endif
-    swapcontext(&(t->context), &(current_task->context));
+    ucontext_t *current = &(t->context);
+#ifdef DEBUG
+    printf("\n acessou t->context \n");
+#endif
+    ucontext_t *to_switch = &(current_task->context);
+#ifdef DEBUG
+    printf("\n acessou current_task->context \n");
+#endif
+    swapcontext(current, to_switch);
 //    if (t == &dispatcher) {
 //        swapcontext(&(t->context), &(current_task->context));
 //    } else {
