@@ -42,10 +42,14 @@ int task_switch (task_t *task)
     return task->id;
 }
 
-void task_exit (int exit_code)
-{
+void task_exit (int exit_code) {
     print_message(MAG, "task_exit()", "Saindo da tarefa");
-    task_switch(&task_main);
+    if (tasks_queue) {
+        queue_remove((queue_t **) tasks_queue, (queue_t *) current_task);
+        task_switch(&dispatcher);
+    } else {
+        task_switch(&task_main);
+    }
 }
 
 // Implementação das funções do P3 -- Dispatcher e scheduler
@@ -152,7 +156,7 @@ int task_id() {
 }
 
 void task_yield () {
-    print_message(RED, "ppos_init()", "Iniciando Dispatcher");
+    //print_message(RED, "ppos_init()", "Iniciando Dispatcher");
     task_switch(&dispatcher);
 }
 
