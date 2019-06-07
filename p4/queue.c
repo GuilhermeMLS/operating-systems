@@ -121,8 +121,12 @@ queue_t *queue_remove (queue_t **queue, queue_t *elem){
             while (aux->next != *queue && aux != elem)
                 aux = aux->next;
 
-            if (aux != elem)
+            if (aux != elem) {
+#ifndef DEBUG
+                printf("queue_remove: o elemento não pertence à fila.\n");
+#endif
                 return NULL;
+            }
             else
             {
                 elem->next->prev = elem->prev;
