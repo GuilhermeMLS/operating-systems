@@ -124,6 +124,12 @@ void dispatcher_body()
             tasks_queue = tasks_queue->next;
             task_switch(task);
         }
+        printf("\nvou testar saporra caralho\n");
+        if (queue_size((queue_t*)tasks_queue) > 0) {
+            printf("\nvai entrar no while\n");
+        } else {
+            printf("\nnao vai entrar no while\n");
+        }
     }
     print_message(RED, "dispatcher()", "Saindo do Dispatcher");
     task_exit(0);

@@ -72,8 +72,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ppos.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="814">
-                  <caret line="60" column="27" lean-forward="true" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
+                <state relative-caret-position="712">
+                  <caret line="126" column="44" selection-start-line="126" selection-start-column="44" selection-end-line="126" selection-end-column="44" />
                   <folding>
                     <element signature="e#611#663#0" expanded="true" />
                     <element signature="e#854#968#0" expanded="true" />
@@ -269,12 +269,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559843882302</updated>
-      <workItem from="1559843884130" duration="13951000" />
+      <workItem from="1559843884130" duration="14255000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13951000" />
+    <option name="totallyTimeSpent" value="14255000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-312" y="-1080" width="1920" height="1080" extended-state="0" />
@@ -379,8 +379,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ppos.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
-          <caret line="60" column="27" lean-forward="true" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
+        <state relative-caret-position="712">
+          <caret line="126" column="44" selection-start-line="126" selection-start-column="44" selection-end-line="126" selection-end-column="44" />
           <folding>
             <element signature="e#611#663#0" expanded="true" />
             <element signature="e#854#968#0" expanded="true" />
