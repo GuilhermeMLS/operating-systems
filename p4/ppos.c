@@ -44,7 +44,20 @@ int task_switch (task_t *task)
     ucontext_t *to_switch = &(current_task->context);
 #ifdef DEBUG
     printf("\n acessou current_task->context \n");
+//
+//    //acessar todos os atributor de cada variavel
+//    task->context.uc_stack.ss_sp; //pointer
+//    task->context.uc_stack.ss_size; // int
+//    task->context.uc_stack.ss_flags; //int
+//    task->context.uc_link; //int
+//
+//    //acessar todos os atributor de cada variavel
+//    t->context.uc_stack.ss_sp;
+//    t->context.uc_stack.ss_size;
+//    t->context.uc_stack.ss_flags;
+//    t->context.uc_link;
 #endif
+
     swapcontext(current, to_switch);
 //    if (t == &dispatcher) {
 //        swapcontext(&(t->context), &(current_task->context));
@@ -52,7 +65,7 @@ int task_switch (task_t *task)
 //        print_message(MAG,"task_swtich()", "<<<<< Trocando contexto >>>>>");
 //        swapcontext(&(t->context), &(task->context));
 //    }
-
+    printf("\nserá que é aqui?????\n");
     return task->id;
 }
 
