@@ -36,6 +36,7 @@ int task_switch (task_t *task)
     if (t == &dispatcher) {
         swapcontext(&(t->context), &(current_task->context));
     } else {
+        print_message(MAG,"task_swtich()", "<<<<< Trocando contexto >>>>>");
         swapcontext(&((*t).context), &(task->context));
     }
 
