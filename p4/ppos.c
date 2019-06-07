@@ -117,7 +117,8 @@ void dispatcher_body()
     while (tasks_queue) {
         task = scheduler();
         if (task != NULL) {
-            tasks_queue = tasks_queue->next;
+            //tasks_queue = tasks_queue->next;
+            queue_remove((queue_t **)&tasks_queue, (queue_t *)task);
             task_switch(task);
         }
     }
@@ -187,9 +188,9 @@ int task_id() {
 
 void task_yield () {
     //print_message(RED, "ppos_init()", "Iniciando Dispatcher");
-//    if (current_task != &task_main) {
-//        queue_append((queue_t **)&tasks_queue, (queue_t *) current_task);
-//    }
+    if (current_task != &task_main) {
+        queue_append((queue_t **)&tasks_queue, (queue_t *) current_task);
+    }
     task_switch(&dispatcher);
 }
 
