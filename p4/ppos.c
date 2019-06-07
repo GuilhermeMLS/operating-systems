@@ -89,13 +89,20 @@ task_t *scheduler()
 {
     print_message(RED, "scheduler()", "Selecionando próxima tarefa");
     task_t *task_to_run = tasks_queue;
+    printf("\n[debug] acessou tasks_queue\n");
     task_t *iterator = task_to_run->next;
+    printf("\n[debug] acessou task_to_run->next\n");
     if (iterator != task_to_run) {
+        printf("\n[debug] comparou iterator com task_to_run\n");
         while (iterator != tasks_queue) {
+            printf("\n[debug] entrou no while\n");
             if (iterator->priority <= task_to_run->priority) {
+                printf("\n[debug] comparou iterator->priority <= task_to_run->priority\n");
                 task_to_run = iterator;
             }
+
             iterator = iterator->next;
+            printf("\n[debug] comparou iterator = iterator->next\n");
         }
         // implements aging
         print_message(RED, "scheduler()", "Aplicando aging...");
@@ -106,6 +113,7 @@ task_t *scheduler()
         }
     }
     task_to_run->priority = task_to_run->init_priority;
+    printf("\n[debug] atribuiu task_to_run->priority = task_to_run->init_priority\n");
 #ifdef DEBUG
     printf("\nScheduler selecionou a tarefa de ID %d\n", task_to_run->id);
 #endif
