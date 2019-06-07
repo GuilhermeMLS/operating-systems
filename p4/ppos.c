@@ -3,7 +3,8 @@
 #include <stdio.h>
 #include "ppos_data.h"
 #include <stdlib.h>
-#include "queue.h"
+//#include "queue.h"
+#include "../p0/queue.h"
 
 // Implementação das funções da lib ppos.h por Guilherme M. Lopes
 #define STACKSIZE 32768
