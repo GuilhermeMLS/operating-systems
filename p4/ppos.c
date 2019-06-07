@@ -67,7 +67,7 @@ int task_switch (task_t *task)
 //    }
     printf("\ndale o ID da task: %d\n", current_task->id);
     printf("\nserá que é aqui?????\n");
-    return task->id;
+    return current_task->id;
 }
 
 void task_exit (int exit_code) {
