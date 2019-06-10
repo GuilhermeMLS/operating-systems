@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/p5.dir/main.c.o"
+  "CMakeFiles/p5.dir/timer.c.o"
+  "CMakeFiles/p5.dir/ppos.c.o"
+  "CMakeFiles/p5.dir/queue.c.o"
   "p5.pdb"
   "p5"
 )

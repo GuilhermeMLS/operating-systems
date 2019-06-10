@@ -78,7 +78,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/guilhermemorais/CLionProjects/so/p5/main.c">
+		<Unit filename="/Users/guilhermemorais/CLionProjects/so/p5/ppos.c">
+			<Option target="p5"/>
+		</Unit>
+		<Unit filename="/Users/guilhermemorais/CLionProjects/so/p5/ppos.h">
+			<Option target="p5"/>
+		</Unit>
+		<Unit filename="/Users/guilhermemorais/CLionProjects/so/p5/queue.c">
+			<Option target="p5"/>
+		</Unit>
+		<Unit filename="/Users/guilhermemorais/CLionProjects/so/p5/queue.h">
+			<Option target="p5"/>
+		</Unit>
+		<Unit filename="/Users/guilhermemorais/CLionProjects/so/p5/timer.c">
 			<Option target="p5"/>
 		</Unit>
 		<Unit filename="/Users/guilhermemorais/CLionProjects/so/p5/CMakeLists.txt">

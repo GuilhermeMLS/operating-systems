@@ -123,32 +123,86 @@ p5/fast:
 	$(MAKE) -f CMakeFiles/p5.dir/build.make CMakeFiles/p5.dir/build
 .PHONY : p5/fast
 
-main.o: main.c.o
+ppos.o: ppos.c.o
 
-.PHONY : main.o
+.PHONY : ppos.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/p5.dir/build.make CMakeFiles/p5.dir/main.c.o
-.PHONY : main.c.o
+ppos.c.o:
+	$(MAKE) -f CMakeFiles/p5.dir/build.make CMakeFiles/p5.dir/ppos.c.o
+.PHONY : ppos.c.o
 
-main.i: main.c.i
+ppos.i: ppos.c.i
 
-.PHONY : main.i
+.PHONY : ppos.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/p5.dir/build.make CMakeFiles/p5.dir/main.c.i
-.PHONY : main.c.i
+ppos.c.i:
+	$(MAKE) -f CMakeFiles/p5.dir/build.make CMakeFiles/p5.dir/ppos.c.i
+.PHONY : ppos.c.i
 
-main.s: main.c.s
+ppos.s: ppos.c.s
 
-.PHONY : main.s
+.PHONY : ppos.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/p5.dir/build.make CMakeFiles/p5.dir/main.c.s
-.PHONY : main.c.s
+ppos.c.s:
+	$(MAKE) -f CMakeFiles/p5.dir/build.make CMakeFiles/p5.dir/ppos.c.s
+.PHONY : ppos.c.s
+
+queue.o: queue.c.o
+
+.PHONY : queue.o
+
+# target to build an object file
+queue.c.o:
+	$(MAKE) -f CMakeFiles/p5.dir/build.make CMakeFiles/p5.dir/queue.c.o
+.PHONY : queue.c.o
+
+queue.i: queue.c.i
+
+.PHONY : queue.i
+
+# target to preprocess a source file
+queue.c.i:
+	$(MAKE) -f CMakeFiles/p5.dir/build.make CMakeFiles/p5.dir/queue.c.i
+.PHONY : queue.c.i
+
+queue.s: queue.c.s
+
+.PHONY : queue.s
+
+# target to generate assembly for a file
+queue.c.s:
+	$(MAKE) -f CMakeFiles/p5.dir/build.make CMakeFiles/p5.dir/queue.c.s
+.PHONY : queue.c.s
+
+timer.o: timer.c.o
+
+.PHONY : timer.o
+
+# target to build an object file
+timer.c.o:
+	$(MAKE) -f CMakeFiles/p5.dir/build.make CMakeFiles/p5.dir/timer.c.o
+.PHONY : timer.c.o
+
+timer.i: timer.c.i
+
+.PHONY : timer.i
+
+# target to preprocess a source file
+timer.c.i:
+	$(MAKE) -f CMakeFiles/p5.dir/build.make CMakeFiles/p5.dir/timer.c.i
+.PHONY : timer.c.i
+
+timer.s: timer.c.s
+
+.PHONY : timer.s
+
+# target to generate assembly for a file
+timer.c.s:
+	$(MAKE) -f CMakeFiles/p5.dir/build.make CMakeFiles/p5.dir/timer.c.s
+.PHONY : timer.c.s
 
 # Help Target
 help:
@@ -159,9 +213,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... p5"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... ppos.o"
+	@echo "... ppos.i"
+	@echo "... ppos.s"
+	@echo "... queue.o"
+	@echo "... queue.i"
+	@echo "... queue.s"
+	@echo "... timer.o"
+	@echo "... timer.i"
+	@echo "... timer.s"
 .PHONY : help
 
 

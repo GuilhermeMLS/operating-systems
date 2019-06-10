@@ -57,30 +57,60 @@ include CMakeFiles/p5.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/p5.dir/flags.make
 
-CMakeFiles/p5.dir/main.c.o: CMakeFiles/p5.dir/flags.make
-CMakeFiles/p5.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/guilhermemorais/CLionProjects/so/p5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/p5.dir/main.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/p5.dir/main.c.o   -c /Users/guilhermemorais/CLionProjects/so/p5/main.c
+CMakeFiles/p5.dir/timer.c.o: CMakeFiles/p5.dir/flags.make
+CMakeFiles/p5.dir/timer.c.o: ../timer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/guilhermemorais/CLionProjects/so/p5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/p5.dir/timer.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/p5.dir/timer.c.o   -c /Users/guilhermemorais/CLionProjects/so/p5/timer.c
 
-CMakeFiles/p5.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/p5.dir/main.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/guilhermemorais/CLionProjects/so/p5/main.c > CMakeFiles/p5.dir/main.c.i
+CMakeFiles/p5.dir/timer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/p5.dir/timer.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/guilhermemorais/CLionProjects/so/p5/timer.c > CMakeFiles/p5.dir/timer.c.i
 
-CMakeFiles/p5.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/p5.dir/main.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/guilhermemorais/CLionProjects/so/p5/main.c -o CMakeFiles/p5.dir/main.c.s
+CMakeFiles/p5.dir/timer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/p5.dir/timer.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/guilhermemorais/CLionProjects/so/p5/timer.c -o CMakeFiles/p5.dir/timer.c.s
+
+CMakeFiles/p5.dir/ppos.c.o: CMakeFiles/p5.dir/flags.make
+CMakeFiles/p5.dir/ppos.c.o: ../ppos.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/guilhermemorais/CLionProjects/so/p5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/p5.dir/ppos.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/p5.dir/ppos.c.o   -c /Users/guilhermemorais/CLionProjects/so/p5/ppos.c
+
+CMakeFiles/p5.dir/ppos.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/p5.dir/ppos.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/guilhermemorais/CLionProjects/so/p5/ppos.c > CMakeFiles/p5.dir/ppos.c.i
+
+CMakeFiles/p5.dir/ppos.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/p5.dir/ppos.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/guilhermemorais/CLionProjects/so/p5/ppos.c -o CMakeFiles/p5.dir/ppos.c.s
+
+CMakeFiles/p5.dir/queue.c.o: CMakeFiles/p5.dir/flags.make
+CMakeFiles/p5.dir/queue.c.o: ../queue.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/guilhermemorais/CLionProjects/so/p5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/p5.dir/queue.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/p5.dir/queue.c.o   -c /Users/guilhermemorais/CLionProjects/so/p5/queue.c
+
+CMakeFiles/p5.dir/queue.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/p5.dir/queue.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/guilhermemorais/CLionProjects/so/p5/queue.c > CMakeFiles/p5.dir/queue.c.i
+
+CMakeFiles/p5.dir/queue.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/p5.dir/queue.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/guilhermemorais/CLionProjects/so/p5/queue.c -o CMakeFiles/p5.dir/queue.c.s
 
 # Object files for target p5
 p5_OBJECTS = \
-"CMakeFiles/p5.dir/main.c.o"
+"CMakeFiles/p5.dir/timer.c.o" \
+"CMakeFiles/p5.dir/ppos.c.o" \
+"CMakeFiles/p5.dir/queue.c.o"
 
 # External object files for target p5
 p5_EXTERNAL_OBJECTS =
 
-p5: CMakeFiles/p5.dir/main.c.o
+p5: CMakeFiles/p5.dir/timer.c.o
+p5: CMakeFiles/p5.dir/ppos.c.o
+p5: CMakeFiles/p5.dir/queue.c.o
 p5: CMakeFiles/p5.dir/build.make
 p5: CMakeFiles/p5.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/guilhermemorais/CLionProjects/so/p5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable p5"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/guilhermemorais/CLionProjects/so/p5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable p5"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/p5.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
