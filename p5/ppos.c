@@ -196,7 +196,7 @@ void tratador (int signum)
         current_task->quantum--;
         if (current_task->quantum <= 0 ) {
             task_yield();
-            current_task->quantum = 20;
+            //current_task->quantum = 20;
         }
     }
     //printf ("Recebi o sinal %d\n", signum) ;
