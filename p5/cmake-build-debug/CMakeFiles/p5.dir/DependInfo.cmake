@@ -7,7 +7,6 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/guilhermemorais/CLionProjects/so/p5/pingpong-preempcao.c" "/Users/guilhermemorais/CLionProjects/so/p5/cmake-build-debug/CMakeFiles/p5.dir/pingpong-preempcao.c.o"
   "/Users/guilhermemorais/CLionProjects/so/p5/ppos.c" "/Users/guilhermemorais/CLionProjects/so/p5/cmake-build-debug/CMakeFiles/p5.dir/ppos.c.o"
   "/Users/guilhermemorais/CLionProjects/so/p5/queue.c" "/Users/guilhermemorais/CLionProjects/so/p5/cmake-build-debug/CMakeFiles/p5.dir/queue.c.o"
-  "/Users/guilhermemorais/CLionProjects/so/p5/timer.c" "/Users/guilhermemorais/CLionProjects/so/p5/cmake-build-debug/CMakeFiles/p5.dir/timer.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

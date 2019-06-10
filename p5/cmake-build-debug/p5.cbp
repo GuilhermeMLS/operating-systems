@@ -93,9 +93,6 @@
 		<Unit filename="/Users/guilhermemorais/CLionProjects/so/p5/queue.h">
 			<Option target="p5"/>
 		</Unit>
-		<Unit filename="/Users/guilhermemorais/CLionProjects/so/p5/timer.c">
-			<Option target="p5"/>
-		</Unit>
 		<Unit filename="/Users/guilhermemorais/CLionProjects/so/p5/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
