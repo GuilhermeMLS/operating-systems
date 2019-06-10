@@ -176,6 +176,31 @@ int task_create (
 }
 
 
+void task_yield () {
+    //print_message(RED, "ppos_init()", "Iniciando Dispatcher");
+    if (current_task != &task_main) {
+        queue_append((queue_t **)&tasks_queue, (queue_t *) current_task);
+    }
+    task_switch(&dispatcher);
+}
+
+// tratador do sinal
+void tratador (int signum)
+{
+    // toda vez que eu executar esta função, devo
+    // decrementar 1 do quantum da tarefa atual
+    // se a tarefa chegar em zero, eu dou um task_yield
+    // e jogo ela pro dispatcher, que vai selecionar
+    // a próxima tarefa da fila
+    if (current_task != &task_main && current_task != &dispatcher) {
+        current_task->quantum--;
+        if (current_task->quantum <= 0 ) {
+            task_yield();
+            current_task->quantum = 20;
+        }
+    }
+    //printf ("Recebi o sinal %d\n", signum) ;
+}
 
 void ppos_init ()
 {
@@ -220,13 +245,6 @@ int task_id() {
     return current_task->id;
 }
 
-void task_yield () {
-    //print_message(RED, "ppos_init()", "Iniciando Dispatcher");
-    if (current_task != &task_main) {
-        queue_append((queue_t **)&tasks_queue, (queue_t *) current_task);
-    }
-    task_switch(&dispatcher);
-}
 
 void task_setprio (task_t *task, int prio) {
     if (task != NULL) {
@@ -245,23 +263,6 @@ int task_getprio (task_t *task) {
     }
 }
 
-// tratador do sinal
-void tratador (int signum)
-{
-    // toda vez que eu executar esta função, devo
-    // decrementar 1 do quantum da tarefa atual
-    // se a tarefa chegar em zero, eu dou um task_yield
-    // e jogo ela pro dispatcher, que vai selecionar
-    // a próxima tarefa da fila
-    if (current_task != &task_main && current_task != &dispatcher) {
-        current_task->quantum--;
-        if (current_task->quantum <= 0 ) {
-            task_yield();
-            current_task->quantum = 20;
-        }
-    }
-    //printf ("Recebi o sinal %d\n", signum) ;
-}
 
 
 

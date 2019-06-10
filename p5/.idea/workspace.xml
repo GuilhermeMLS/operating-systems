@@ -34,9 +34,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="828478da-1390-4e20-8655-b44f2cf5a647" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../p0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../p0/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../p4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppos.c" beforeDir="false" afterPath="$PROJECT_DIR$/ppos.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,8 +61,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ppos.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+            <state relative-caret-position="331">
+              <caret line="183" column="24" lean-forward="true" selection-start-line="183" selection-start-column="24" selection-end-line="183" selection-end-column="24" />
               <folding>
                 <element signature="e#89#107#0" expanded="true" />
               </folding>
@@ -138,9 +136,9 @@
         <option value="$PROJECT_DIR$/pingpong-preempcao.c" />
         <option value="$PROJECT_DIR$/timer.c" />
         <option value="$PROJECT_DIR$/ppos_data.h" />
-        <option value="$PROJECT_DIR$/ppos.c" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Makefile" />
+        <option value="$PROJECT_DIR$/ppos.c" />
       </list>
     </option>
   </component>
@@ -206,12 +204,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1560174853474</updated>
-      <workItem from="1560174855114" duration="5545000" />
+      <workItem from="1560174855114" duration="5783000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5545000" />
+    <option name="totallyTimeSpent" value="5783000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -306,8 +304,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ppos.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+        <state relative-caret-position="331">
+          <caret line="183" column="24" lean-forward="true" selection-start-line="183" selection-start-column="24" selection-end-line="183" selection-end-column="24" />
           <folding>
             <element signature="e#89#107#0" expanded="true" />
           </folding>
