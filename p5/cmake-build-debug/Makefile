@@ -123,6 +123,33 @@ p5/fast:
 	$(MAKE) -f CMakeFiles/p5.dir/build.make CMakeFiles/p5.dir/build
 .PHONY : p5/fast
 
+pingpong-preempcao.o: pingpong-preempcao.c.o
+
+.PHONY : pingpong-preempcao.o
+
+# target to build an object file
+pingpong-preempcao.c.o:
+	$(MAKE) -f CMakeFiles/p5.dir/build.make CMakeFiles/p5.dir/pingpong-preempcao.c.o
+.PHONY : pingpong-preempcao.c.o
+
+pingpong-preempcao.i: pingpong-preempcao.c.i
+
+.PHONY : pingpong-preempcao.i
+
+# target to preprocess a source file
+pingpong-preempcao.c.i:
+	$(MAKE) -f CMakeFiles/p5.dir/build.make CMakeFiles/p5.dir/pingpong-preempcao.c.i
+.PHONY : pingpong-preempcao.c.i
+
+pingpong-preempcao.s: pingpong-preempcao.c.s
+
+.PHONY : pingpong-preempcao.s
+
+# target to generate assembly for a file
+pingpong-preempcao.c.s:
+	$(MAKE) -f CMakeFiles/p5.dir/build.make CMakeFiles/p5.dir/pingpong-preempcao.c.s
+.PHONY : pingpong-preempcao.c.s
+
 ppos.o: ppos.c.o
 
 .PHONY : ppos.o
@@ -213,6 +240,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... p5"
+	@echo "... pingpong-preempcao.o"
+	@echo "... pingpong-preempcao.i"
+	@echo "... pingpong-preempcao.s"
 	@echo "... ppos.o"
 	@echo "... ppos.i"
 	@echo "... ppos.s"

@@ -3,4 +3,4 @@ project(p5 C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(p5 timer.c ppos.c queue.c)
+add_executable(p5 timer.c pingpong-preempcao.c ppos.c queue.c)

@@ -78,6 +78,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/guilhermemorais/CLionProjects/so/p5/pingpong-preempcao.c">
+			<Option target="p5"/>
+		</Unit>
 		<Unit filename="/Users/guilhermemorais/CLionProjects/so/p5/ppos.c">
 			<Option target="p5"/>
 		</Unit>

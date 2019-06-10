@@ -31,6 +31,11 @@ int main ()
     action.sa_flags = 0 ;
     if (sigaction (SIGALRM, &action, 0) < 0)
     {
+        // toda vez que eu executar esta função, devo
+        // decrementar 1 do quantum da tarefa atual
+        // se a tarefa chegar em zero, eu dou um task_yield
+        // e jogo ela pro dispatcher, que vai selecionar
+        // a próxima tarefa da fila
         perror ("Erro em sigaction: ") ;
         exit (1) ;
     }

@@ -3,8 +3,10 @@
 #include <stdio.h>
 #include "ppos_data.h"
 #include <stdlib.h>
-//#include "queue.h"
-#include "../p0/queue.h"
+#include <signal.h>
+#include <sys/time.h>
+//#include "queue.h" parece que ta errada
+#include "../p0/queue.h" // usando a do p0
 
 // Implementação das funções da lib ppos.h por Guilherme M. Lopes
 #define STACKSIZE 32768
@@ -13,13 +15,20 @@ int task_ids;
 int age = -1;
 task_t *tasks_queue;
 task_t dispatcher;
+int init_quantum = 20;
 
 // Constantes para mensagens de erro e debug coloridas
 #define RED "\x1B[31m"
 #define MAG "\x1B[35m"
 #define CYN "\x1B[36m"
+
 #define RESET "\x1B[0m"
 
+// estrutura que define um tratador de sinal (deve ser global ou static)
+struct sigaction action ;
+
+// estrutura de inicialização to timer
+struct itimerval timer;
 
 // Mensagens de erro ou debugger
 void print_message(char *color, char *func, char *message)
@@ -146,6 +155,7 @@ int task_create (
     task_ids++;
     task->init_priority = 0;
     task->priority = task->init_priority;
+    task->quantum = init_quantum;
 
     makecontext (&(task->context), (void*)(start_func), 1, arg);
 
@@ -180,6 +190,30 @@ void ppos_init ()
     task_create(&dispatcher, (void *)(dispatcher_body), "");
     //queue_remove((queue_t **)&tasks_queue, (queue_t *)&dispatcher);
 
+
+    // Aqui começa o P5
+    // registra a ação para o sinal de timer SIGALRM
+    action.sa_handler = tratador ;
+    sigemptyset (&action.sa_mask) ;
+    action.sa_flags = 0 ;
+    if (sigaction (SIGALRM, &action, 0) < 0)
+    {
+        perror ("Erro em sigaction: ") ;
+        exit (1) ;
+    }
+
+    // ajusta valores do temporizador
+    timer.it_value.tv_usec = 3000 ;      // primeiro disparo, em micro-segundos
+    timer.it_value.tv_sec  = 0 ;      // primeiro disparo, em segundos
+    timer.it_interval.tv_usec = 100 ;   // disparos subsequentes, em micro-segundos
+    timer.it_interval.tv_sec  = 0 ;   // disparos subsequentes, em segundos
+
+    // arma o temporizador ITIMER_REAL (vide man setitimer)
+    if (setitimer (ITIMER_REAL, &timer, 0) < 0)
+    {
+        perror ("Erro em setitimer: ") ;
+        exit (1) ;
+    }
 }
 
 int task_id() {
@@ -211,11 +245,23 @@ int task_getprio (task_t *task) {
     }
 }
 
-
-
-
-
-
+// tratador do sinal
+void tratador (int signum)
+{
+    // toda vez que eu executar esta função, devo
+    // decrementar 1 do quantum da tarefa atual
+    // se a tarefa chegar em zero, eu dou um task_yield
+    // e jogo ela pro dispatcher, que vai selecionar
+    // a próxima tarefa da fila
+    if (current_task != &task_main && current_task != &dispatcher) {
+        current_task->quantum--;
+        if (current_task->quantum <= 0 ) {
+            task_yield();
+            current_task->quantum = 20;
+        }
+    }
+    //printf ("Recebi o sinal %d\n", signum) ;
+}
 
 
 

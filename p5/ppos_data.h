@@ -21,6 +21,7 @@ typedef struct task_t
     char *stack;
     int priority; // prioridade da tarefa
     int init_priority; // prioridade inicial
+    int quantum;
     // ... (outros campos serão adicionados mais tarde)
 } task_t ;
 
