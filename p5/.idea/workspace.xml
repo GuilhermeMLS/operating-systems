@@ -36,7 +36,7 @@
     <list default="true" id="828478da-1390-4e20-8655-b44f2cf5a647" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../p0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../p0/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../p4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../p4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/timer.c" beforeDir="false" afterPath="$PROJECT_DIR$/timer.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/timer.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-237">
-              <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+            <state relative-caret-position="323">
+              <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
               <folding>
                 <element signature="e#57#75#0" expanded="true" />
                 <element signature="e#276#427#0" expanded="true" />
@@ -82,7 +82,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Makefile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="48">
@@ -104,9 +104,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/timer.c" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Makefile" />
+        <option value="$PROJECT_DIR$/timer.c" />
       </list>
     </option>
   </component>
@@ -114,10 +114,8 @@
     <option name="directoryName" value="HLrmwjdn" />
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="-312" />
-    <option name="y" value="-1080" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -174,19 +172,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1560174853474</updated>
-      <workItem from="1560174855114" duration="2630000" />
+      <workItem from="1560174855114" duration="3431000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2630000" />
+    <option name="totallyTimeSpent" value="3431000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-312" y="-1080" width="1920" height="1080" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.171875" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="CMake" weight="0.3298479" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -197,7 +195,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3298479" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.44948187" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -237,21 +235,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/timer.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-237">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-          <folding>
-            <element signature="e#57#75#0" expanded="true" />
-            <element signature="e#276#427#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
           <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timer.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+          <folding>
+            <element signature="e#57#75#0" expanded="true" />
+            <element signature="e#276#427#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
