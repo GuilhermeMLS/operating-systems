@@ -113,7 +113,7 @@ task_t *scheduler()
 //    }
 //    task_to_run->priority = task_to_run->init_priority;
 #ifdef DEBUG
-    printf("\nScheduler selecionou a tarefa de ID %d\n", task_to_run->id);
+    printf("\nScheduler selecionou a tarefa de ID %d\n", tasks_queue->id);
 #endif
 
     return tasks_queue;
@@ -228,7 +228,7 @@ void ppos_init ()
     }
 
     // ajusta valores do temporizador
-    timer.it_value.tv_usec = 3000 ;      // primeiro disparo, em micro-segundos
+    timer.it_value.tv_usec = 300 ;      // primeiro disparo, em micro-segundos
     timer.it_value.tv_sec  = 0 ;      // primeiro disparo, em segundos
     timer.it_interval.tv_usec = 100 ;   // disparos subsequentes, em micro-segundos
     timer.it_interval.tv_sec  = 0 ;   // disparos subsequentes, em segundos
